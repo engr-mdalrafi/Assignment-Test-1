@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.display-hidden{
+    display: none;
+}
+
 :root{
     --primary-font:"Poppins", sans-serif;
     --secondary-font: "Inter", sans-serif;
@@ -138,10 +142,17 @@
     padding: 70px 0px 100px;
 }
 
+.company-icon img{
+    width: 100%;
+}
+
 .company-icon{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     padding: 40px 60px;
     gap: 60px;
     justify-content: center;
+    align-items: center;
     border-top: 1px solid #C0CCDA;
     border-bottom: 1px solid #C0CCDA;
 }
@@ -176,6 +187,10 @@
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 100%;
 }
 
 .card-title{
@@ -224,6 +239,10 @@
     align-items: center;
     gap: 95px;
     font-family: var(--primary-font);
+}
+
+.featured-img img{
+    width: 100%;
 }
 
 .featured-text .featured-title{
@@ -283,4 +302,99 @@ footer{
 
 
 
+/* responsive device 576px */
+@media screen and (max-width: 576px) {
+
+    .navber, .menu{
+        flex-direction: column;
+    }
+    .banner-contain,
+    .featured-contain{
+        flex-direction: column-reverse;
+    }
+
+
+    /* share style */
+
+    .banner-contain{
+        text-align: center;
+        gap: 40px;
+    }
+
+    .banner-title{
+        font-size: 1.75rem;
+        line-height: 40px;
+
+    }
+
+    .text-contain{
+        width: 350px;
+    }
+
+    /* banner style */
+
+    .navber{
+        padding: 35px 0;
+    }
+
+    .menu{
+        gap: 10px;
+        text-align: center;
+    }
+
+
+
+    /* company name */
+
+    #company-name {
+    padding: 70px 0px 40px;
+}
+
+    .company-icon img{
+        width: 68px;
+    }
+    .company-icon{
+        margin: 0 auto;
+        gap: 20px;
+        grid-template-columns:repeat(4, 1fr);
+        padding: 0 42px;
+        border: none;
+    }
+
+
+    /* popular collection style */
+
+    .popular-title {
+    padding-bottom: 20px;
+    
+}
+
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .see-more{
+        text-align: left;
+    }
+
+
+    /* fueatured section */
+    
+    .featured-contain{
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .featured-text .featured-title {
+    font-size: 1.5rem;
+    line-height: 30px;
+    }
+
+
+
+        /* footer section */
+.footer-title {
+    font-size: 1.5rem;
+}
+}
 
